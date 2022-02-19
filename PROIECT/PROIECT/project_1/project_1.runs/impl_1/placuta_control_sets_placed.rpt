@@ -1,0 +1,85 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Jan 12 04:51:03 2022
+| Host         : DESKTOP-2AAQ2E1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file placuta_control_sets_placed.rpt
+| Design       : placuta
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    57 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              79 |           31 |
+| No           | No                    | Yes                    |               3 |            1 |
+| No           | Yes                   | No                     |              68 |           19 |
+| Yes          | No                    | No                     |              60 |           30 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              13 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------+-----------------------------------------+-----------------------------+------------------+----------------+
+|     Clock Signal    |              Enable Signal              |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++---------------------+-----------------------------------------+-----------------------------+------------------+----------------+
+|  clk_IBUF_BUFG      | bl_rx/rxDvR                             |                             |                1 |              1 |
+|  clk_IBUF_BUFG      | senzor/ctlCtl/fReady_reg                | senzor/fReady0              |                1 |              1 |
+|  clk_IBUF_BUFG      | buton_start/eqOp                        |                             |                2 |              2 |
+|  clk_IBUF_BUFG      | senzor/retryCnt[3]_i_2_n_0              | senzor/retryCnt[3]_i_1_n_0  |                1 |              4 |
+|  clk_IBUF_BUFG      | senzor/ctlCtl/FSM_gray_state[3]_i_1_n_0 |                             |                3 |              4 |
+|  clk_IBUF_BUFG      |                                         | senzor/ctlCtl/busFreeCnt0_2 |                3 |              8 |
+|  clk_IBUF_BUFG      | bl_tx/txDataR[7]_i_1_n_0                |                             |                2 |              8 |
+|  clk_IBUF_BUFG      | senzor/ctlCtl/dataByte[7]_i_1_n_0       |                             |                4 |              8 |
+|  clk_IBUF_BUFG      | senzor/ctlCtl/sclCnt[7]_i_2_n_0         | senzor/ctlCtl/sclCnt0_0     |                2 |              8 |
+|  clk_IBUF_BUFG      | senzor/ctlCtl/temp_reg[0]               |                             |                4 |              8 |
+|  unitate_cc/E[0]    |                                         |                             |                3 |              8 |
+|  unitate_cc//i__n_0 |                                         |                             |                4 |             13 |
+|  clk_IBUF_BUFG      | bl_rx/clkCountR[13]_i_1__0_n_0          |                             |                8 |             14 |
+|  clk_IBUF_BUFG      | bl_tx/clkCountR[13]_i_1_n_0             |                             |                6 |             15 |
+|  clk_IBUF_BUFG      |                                         | senzor/clear                |                5 |             17 |
+|  clk_IBUF_BUFG      |                                         | senzor/ctlCtl/p_2_out       |                5 |             20 |
+|  clk_IBUF_BUFG      |                                         | buton_reset/AR[0]           |                7 |             26 |
+|  clk_IBUF_BUFG      |                                         |                             |               24 |             58 |
++---------------------+-----------------------------------------+-----------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     2 |
+| 2      |                     1 |
+| 4      |                     2 |
+| 8      |                     6 |
+| 13     |                     1 |
+| 14     |                     1 |
+| 15     |                     1 |
+| 16+    |                     4 |
++--------+-----------------------+
+
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Jan 06 23:03:35 2022
+# Process ID: 8416
+# Current directory: F:/myAn3/ssc/PROIECT/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12720 F:\myAn3\ssc\PROIECT\project_1\project_1.xpr
+# Log file: F:/myAn3/ssc/PROIECT/project_1/vivado.log
+# Journal file: F:/myAn3/ssc/PROIECT/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/myAn3/ssc/PROIECT/project_1/project_1.xpr

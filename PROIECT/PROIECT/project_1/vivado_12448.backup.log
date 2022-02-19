@@ -1,0 +1,246 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Jan 05 20:12:35 2022
+# Process ID: 12448
+# Current directory: F:/myAn3/ssc/PROIECT/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3248 F:\myAn3\ssc\PROIECT\project_1\project_1.xpr
+# Log file: F:/myAn3/ssc/PROIECT/project_1/vivado.log
+# Journal file: F:/myAn3/ssc/PROIECT/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/myAn3/ssc/PROIECT/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xillinx/Vivado/2016.4/data/ip'.
+launch_runs synth_1 -jobs 2
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/I2C.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/I2C.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/TWICtl.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/TWICtl.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/displ7seg.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/displ7seg.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/mpg.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/mpg.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/placuta.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/placuta.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/senzorTemperatura.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/senzorTemperatura.vhd:1]
+[Wed Jan 05 20:15:21 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Wed Jan 05 20:15:54 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 05 20:17:11 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.4
+  **** Build date : Jan 23 2017-19:37:29
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696608A
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292696608A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292696608A
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/placuta.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/placuta.vhd:1]
+[Wed Jan 05 21:05:04 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Wed Jan 05 21:06:52 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+INFO: [HDL 9-1061] Parsing VHDL file "F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/placuta.vhd" into library xil_defaultlib [F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/placuta.vhd:1]
+[Wed Jan 05 21:08:42 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Wed Jan 05 21:09:16 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 05 21:10:23 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.4
+  **** Build date : Jan 23 2017-19:37:29
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696608A
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292696608A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292696608A
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 05 21:13:47 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+[Wed Jan 05 21:13:47 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 05 21:16:01 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+[Wed Jan 05 21:16:01 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.4
+  **** Build date : Jan 23 2017-19:37:29
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696608A
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292696608A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292696608A
+close_hw
+close [ open F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/separator.vhd w ]
+add_files F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/separator.vhd
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 05 21:35:07 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+[Wed Jan 05 21:35:07 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Jan 05 21:37:01 2022] Launched synth_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/synth_1/runme.log
+[Wed Jan 05 21:37:01 2022] Launched impl_1...
+Run output will be captured here: F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.4
+  **** Build date : Jan 23 2017-19:37:29
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696608A
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {F:/myAn3/ssc/PROIECT/project_1/project_1.runs/impl_1/placuta.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292696608A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292696608A
+close_hw
+close [ open F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/uartTx.vhd w ]
+add_files F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/uartTx.vhd
+close [ open F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/uartRx.vhd w ]
+add_files F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/uartRx.vhd
+close [ open F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/ucc.vhd w ]
+add_files F:/myAn3/ssc/PROIECT/project_1/project_1.srcs/sources_1/new/ucc.vhd
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 06 00:02:41 2022...
